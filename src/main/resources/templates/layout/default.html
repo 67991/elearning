@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <title>Trang chủ</title>
+    <th:block th:replace="fragment/header"></th:block>
+</head>
+
+<body>
+    <div id="pcoded" class="pcoded">
+        <div class="pcoded-overlay-box"></div>
+        <div class="pcoded-container navbar-wrapper">
+
+            <div th:replace="fragment/navbar"></div>
+
+            <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+
+                   <div th:replace="fragment/sidebar"></div>
+
+                    <div class="pcoded-content">
+                        <div class="pcoded-inner-content">
+                            <!-- Main-body start -->
+                            <div layout:fragment="content"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <th:block th:replace="fragment/scripts"></th:block>
+    <script layout:fragment="inner-scripts">
+
+    </script>
+</body>
+
+</html>
